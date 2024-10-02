@@ -1,13 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import SecondsCounter from "./SecondsCounter";
+import SecondsCounter from "./SecondsCounter";  // Asegúrate de importar el componente
 import "../styles/index.css";
 
-let seconds = 0;
-
-const root = ReactDOM.createRoot(document.getElementById("app"));
-
-setInterval(() => {
-  seconds += 1;
-  root.render(<SecondsCounter seconds={seconds} />);
-}, 1000);
+ReactDOM.createRoot(document.getElementById("app")).render(
+  <SecondsCounter seconds={0} />
+);
